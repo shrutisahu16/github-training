@@ -1,5 +1,17 @@
 import java.util.Scanner;
 
+//exception handling
+class AgeException extends Exception{
+    int age;
+    AgeException(int age){
+        this.age=age;
+    }
+    public String toString(){
+        return "Age is less than 16: "+age;
+    }
+}
+
+
 class Emp{
     String name;
     int age;
