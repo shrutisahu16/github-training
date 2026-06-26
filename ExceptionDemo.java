@@ -1,34 +1,33 @@
 import java.util.Scanner;
 
 //exception handling
-class AgeException extends Exception{
+class AgeException extends Exception {
     int age;
-    AgeException(int age){
-        this.age=age;
+
+    AgeException(int age) {
+        this.age = age;
     }
-    public String toString(){
-        return "Age is less than 16: "+age;
+
+    public String toString() {
+        return "Age is greater than 16: " + age;
     }
 }
 
-
-class Emp{
+class Emp {
     String name;
     int age;
-    void getDetails() throws AgeException
-    {
+
+    void getDetails() throws AgeException {
         System.out.println("Enter your Name");
         Scanner sc = new Scanner(System.in);
-        name=sc.next();
+        name = sc.next();
         System.out.println("Enter your age: ");
-        age=sc.nextInt();
-        if(age<16)
-        {
+        age = sc.nextInt();
+        if (age < 16) {
             throw new AgeException(age);
         }
     }
 }
-
 
 class ExceptionDemo {
     public static void main(String[] args) {
