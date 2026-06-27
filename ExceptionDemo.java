@@ -27,6 +27,11 @@ class Emp {
             throw new AgeException(age);
         }
     }
+
+    void printDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
 }
 
 class ExceptionDemo {
@@ -34,6 +39,8 @@ class ExceptionDemo {
         try {
             Emp emp = new Emp();
             emp.getDetails();
+            emp.printDetails();
+            
 
         } catch (AgeException e) {
             System.out.println(e);
