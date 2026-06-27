@@ -28,7 +28,7 @@ class Emp {
         }
     }
 
-    void printDetails() {
+    void displayDetails() {
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
     }
@@ -39,7 +39,7 @@ class ExceptionDemo {
         try {
             Emp emp = new Emp();
             emp.getDetails();
-            emp.printDetails();
+            emp.displayDetails();
             
 
         } catch (AgeException e) {
