@@ -9,7 +9,7 @@ class AgeException extends Exception {
     }
 
     public String toString() {
-        return "Age is greater than 16: " + age;
+        return "Age is less than 16: " + age;
     }
 }
 
